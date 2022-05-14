@@ -1,7 +1,11 @@
-# {{ New Group Name }} Charter
+# BFloat16 draft Charter
 
-The information in this file should be created as part of the group formation and approved by your sponsoring group.  See the [Chairs Best Practices policy](https://docs.google.com/document/d/1rtXskVd7YyFq74tQ2OrInyM_-OQa228R5UZs5Pm3Vz0/) for more details.
+The BFloat16 Task Group (BF16 TG) shall create extensions for vector and scalar floating-point functionality. These extensions include a common set of basic details on the BF16 format and behaviors. There will be
+minimal extensions for scalar and for vector BF16 support that provide the basic instructions to allow BF16 to be used as an interchange format wherein floating-point numbers can be converted between BF16 and a
+fully-supported floating-point format such as binary32 (aka single precision, FP32). The group will also create an extension for RISC-V vectors that adds widening multiply-add type instructions where one or more
+operands are in the BF16 format and the result is in the FP32 format.
 
-A good Task Group (TG) charter describes how it achieves filling in a gap defined by the Special Interest Group (SIG) or Committee that spawned it (directly or dotted line). It lists the specific small set of  deliverables it will deliver.
+The BF16 specifications will include new opcodes and encodings that are specific to BF16 and do not rely on any state --- new or preexisting --- to specify the format for the instructions.
 
-A SIG is an extension of a Committee, in that its only deliverables are strategy, gaps, and prioritizations, and helping spawn other SIGs or TGs to fill the gaps. A good SIG charter spells out the small set of topic areas their strategy will address along with its responsibilities as laid out in this bullet.
+For each of these extensions, The BF16TG will produce complete prose-based written specifications as well as RISC-V SAIL formal specifications. The TG will update the SPIKE model to support these extensions and will
+produce other deliverables as required by its ISA Status Checklist as part of the 2022 New Acceptance Criteria. 
